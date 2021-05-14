@@ -3,7 +3,14 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';        //mongoDB model... 
 import cors from 'cors';
 
+//import the routes here... 
+import postRoutes from './routes/posts.js';
+
 const app = express();
+
+app.use('/posts', postRoutes);
+
+
 
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
@@ -11,7 +18,7 @@ app.use(cors());
 
 //set up mongo db- cloud... 
 
-const CONNECTION_URL = 'mongodb+srv://administrator:admin@password123@cluster0.mfe82.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+const CONNECTION_URL = 'mongodb+srv://administrator:admin@password123@cluster0.mfe82.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'; //cloud.mongodb.com
 const PORT = process.env.PORT || 5000;
 
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
