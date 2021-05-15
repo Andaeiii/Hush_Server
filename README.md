@@ -1,3 +1,3 @@
-# Hush Server Application - Node/Express/MongoDB
+# Hush Server App - Node/Express/MongoDB
 
 Server Application to serve the client front-end with the required files...
