@@ -1,3 +1,6 @@
 # Hush Server App - Express/MongoDB
 
 Server Application to serve the client front-end with the required files...
+
+
+ensure to update you mongoose DB url... 
