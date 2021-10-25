@@ -18,7 +18,9 @@ app.use('/posts', postRoutes);
 
 //set up mongo db- cloud... 
 
-const CONNECTION_URL = 'mongodb+srv://administrator:admin@password123@cluster0.mfe82.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'; //cloud.mongodb.com
+//const CONNECTION_URL = 'mongodb+srv://administrator:admin@password123@cluster0.mfe82.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'; //cloud.mongodb.com
+const CONNECTION_URL = 'mongodb+srv://okwuchi:pass1234_@cluster0.mfe82.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+
 const PORT = process.env.PORT || 5300;
 
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
